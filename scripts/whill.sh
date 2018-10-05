@@ -6,7 +6,7 @@
 # $ cd ~/ros_ws
 # $ source whill.sh
 
-# make sure we don't have the variables already set
+# make sure we don't have the variable set already
 unset baxter_hostname
 
 # hostname of the baxter robot
@@ -17,3 +17,6 @@ source devel/setup.bash
 
 # next modify ROS_MASTER_URI to point out to baxter comptuer
 export ROS_MASTER_URI="http://${baxter_hostname}:11311"
+
+# show ROS_MASTER_URI in shell prompt
+export PS1="[whill - ${ROS_MASTER_URI}] ${PS1}"
