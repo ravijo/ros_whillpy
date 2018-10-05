@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+init.launch: Initilize ros_whillpy package
+Note: Keep running this file in a separate tab forever
+Requirements: No requirements needed
+Author: Ravi Joshi
+Date: 2018/10/12
+-->
+<launch>
+  <!-- run the controller -->
+  <node name="ros_whillpy" pkg="ros_whillpy" type="controller.py" output="screen"/>
+</launch>
