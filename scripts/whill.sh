@@ -1,7 +1,7 @@
 #!/bin/bash
 # author: ravi joshi
 # date: 12 oct 2018
-# this shell script initialize necessary ROS environment variables
+# this shell script initializes necessary ROS environment variables
 # this script should be executed at whill ROS node
 
 # make sure we don't have the variables already set
