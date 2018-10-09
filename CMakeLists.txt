@@ -4,16 +4,15 @@ project(ros_whillpy)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  message_generation
 )
-
-## System dependencies are found with CMake's conventions
-#find_package(Pyserial)
 
 ## Generate services in the 'srv' folder
 add_service_files(
    FILES
-   power.srv
-   move.srv
+   Connect.srv
+   Power.srv
+   Move.srv
 )
 
 ## Generate added messages and services with any dependencies listed here

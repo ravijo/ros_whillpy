@@ -1,0 +1,3 @@
+string port # serial port name
+---
+string message # informational, e.g. for error messages

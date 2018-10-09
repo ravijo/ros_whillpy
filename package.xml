@@ -1,23 +1,14 @@
 <?xml version="1.0"?>
-<package format="2">
+<package>
   <name>ros_whillpy</name>
   <version>0.0.1</version>
   <description>Unofficial ROS package for WHILL Model CK control</description>
-
-  <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="joshi.ravi-prakash869@mail.kyutech.jp">Ravi Joshi</maintainer>
-
-  <!-- One license tag required, multiple allowed, one license per tag -->
   <license>MIT</license>
-
   <url type="website">https://github.com/ravijo/ros_whillpy</url>
-
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>rospy</build_depend>
-  <build_export_depend>rospy</build_export_depend>
-  <exec_depend>rospy</exec_depend>
   <build_depend>message_generation</build_depend>
-  <exec_depend>message_runtime</exec_depend>
   <export>
   </export>
 </package>
