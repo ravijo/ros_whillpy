@@ -1,4 +1,4 @@
-bool option # Power option off : false (0) and on : true (1)
+bool option # power option off : false (0) and on : true (1)
 ---
 int32 success  # number of bytes written to the interface
 string message # informational, e.g. for error messages
