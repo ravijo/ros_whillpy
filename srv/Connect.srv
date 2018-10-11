@@ -1,3 +1,4 @@
 string port # serial port name
 ---
+int32 success  # 1 : successfully connected. -1 : error while connecting
 string message # informational, e.g. for error messages

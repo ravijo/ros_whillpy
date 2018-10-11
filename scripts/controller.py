@@ -28,19 +28,24 @@ class Controller:
         rospy.spin()
 
     def handle_connect(self, req):
+        response = ConnectResponse()
         try:
             self.whill = whillpy.connect(port=req.port)
         except Exception as e:
+            response.success = -1
             message = str(e)
         else:
+            response.success = 1
             message = 'Success'
-        return ConnectResponse(message)
+        response.message = message
+        return response
 
     def handle_power(self, req):
         response = PowerResponse()
         try:
             response.success = self.whill.set_power(req.option)
         except Exception as e:
+            response.success = -1
             message = str(e)
         else:
             message = 'Success'
@@ -53,6 +58,7 @@ class Controller:
             response.success = self.whill.move(
                 straight=req.straight, turn=req.turn)
         except Exception as e:
+            response.success = -1
             message = str(e)
         else:
             message = 'Success'
