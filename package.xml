@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>ros_whillpy</name>
-  <version>0.0.1</version>
+  <version>0.0.2</version>
   <description>Unofficial ROS package for WHILL Model CK control</description>
   <maintainer email="joshi.ravi-prakash869@mail.kyutech.jp">Ravi Joshi</maintainer>
   <license>MIT</license>
