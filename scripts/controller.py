@@ -34,29 +34,28 @@ class Controller:
             message = str(e)
         else:
             message = 'Success'
-        #rospy.logerr(message)
         return ConnectResponse(message)
 
     def handle_power(self, req):
         response = PowerResponse()
-        message = 'Success'
         try:
             response.success = self.whill.set_power(req.option)
         except Exception as e:
             message = str(e)
-            rospy.logerr(message)
+        else:
+            message = 'Success'
         response.message = message
         return response
 
     def handle_move(self, req):
         response = MoveResponse()
-        message = 'Success'
         try:
             response.success = self.whill.move(
                 straight=req.straight, turn=req.turn)
         except Exception as e:
             message = str(e)
-            rospy.logerr(message)
+        else:
+            message = 'Success'
         response.message = message
         return response
 
@@ -64,7 +63,7 @@ class Controller:
         ''' cleanup the serial connection object
         '''
         if self.whill:
-            self.whill.__del__()
+            self.whill.__del__()  # shouldn't it be automatic ?
 
 
 if __name__ == '__main__':
