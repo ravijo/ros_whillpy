@@ -28,12 +28,13 @@ class Controller:
         rospy.spin()
 
     def handle_connect(self, req):
-        message = 'Success'
         try:
             self.whill = whillpy.connect(port=req.port)
         except Exception as e:
             message = str(e)
-            rospy.logerr(message)
+        else:
+            message = 'Success'
+        #rospy.logerr(message)
         return ConnectResponse(message)
 
     def handle_power(self, req):
@@ -63,7 +64,7 @@ class Controller:
         ''' cleanup the serial connection object
         '''
         if self.whill:
-            self.whill._connection.close()
+            self.whill.__del__()
 
 
 if __name__ == '__main__':
