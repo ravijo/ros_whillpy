@@ -16,13 +16,17 @@ from ros_whillpy.srv import Move, MoveRequest, MoveResponse
 class Controller:
     def __init__(self):
         self.whill = None
-        rospy.init_node('ros_whillpy_service_node')
+
+        # define a name (this is going to be used as namespace for ros services)
+        name = 'ros_whillpy'
+        rospy.init_node('%s_service_node' % name)
 
         # define services
         connect_service = rospy.Service(
-            'connect', Connect, self.handle_connect)
-        power_service = rospy.Service('power', Power, self.handle_power)
-        move_service = rospy.Service('move', Move, self.handle_move)
+            '/%s/connect' % name, Connect, self.handle_connect)
+        power_service = rospy.Service(
+            '/%s/power' % name, Power, self.handle_power)
+        move_service = rospy.Service('/%s/move' % name, Move, self.handle_move)
 
         rospy.loginfo('Service ros_whillpy is initialized successfully')
         rospy.spin()
