@@ -24,20 +24,23 @@ def main():
 
     try:
         connect = rospy.ServiceProxy(
-            connect_service_name, Connect, persistent=False)
+            connect_service_name, Connect, persistent=True)
         response = connect('/dev/ttyUSB0')
-        print 'response from connect service %d message %s' % (
-            response.success, response.message)
+        print 'response from %s service %d message %s' % (connect_service_name,
+                                                          response.success,
+                                                          response.message)
 
-        power = rospy.ServiceProxy(power_service_name, Power, persistent=False)
+        power = rospy.ServiceProxy(power_service_name, Power, persistent=True)
         response = power(True)
-        print 'response from power service %d message %s' % (
-            response.success, response.message)
+        print 'response from %s service %d message %s' % (power_service_name,
+                                                          response.success,
+                                                          response.message)
 
-        move = rospy.ServiceProxy(move_service_name, Move, persistent=False)
+        move = rospy.ServiceProxy(move_service_name, Move, persistent=True)
         response = move(20, -80)
-        print 'response from move service %d message %s' % (
-            response.success, response.message)
+        print 'response from %s service %d message %s' % (move_service_name,
+                                                          response.success,
+                                                          response.message)
     except rospy.ServiceException as e:
         print 'Service call failed %s' % e
 
