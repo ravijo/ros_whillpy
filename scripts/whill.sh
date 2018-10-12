@@ -2,7 +2,9 @@
 # author: ravi joshi
 # date: 12 oct 2018
 # this shell script initializes necessary ROS environment variables
-# this script should be executed at whill ROS node
+# this script should be executed at whill ROS node in the following way
+# $ cd ~/ros_ws
+# $ source whill.sh
 
 # make sure we don't have the variables already set
 unset baxter_hostname
