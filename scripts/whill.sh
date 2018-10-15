@@ -6,6 +6,11 @@
 # $ cd ~/ros_ws
 # $ source whill.sh
 
+# NOTE: YOU NEED TO UPDATE FOLLOWING VARIABLES ONLY-
+# 'your_ip' AT LINE NUMBER 20
+# 'your_hostname' AT LINE NUMBER 25
+# 'baxter_hostname' AT LINE NUMBER 28
+
 # make sure we don't have these variables set already
 unset your_ip
 unset your_hostname
