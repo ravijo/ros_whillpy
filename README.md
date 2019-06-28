@@ -23,3 +23,5 @@ URI: rosrpc://172.17.69.112:40843
 Type: ros_whillpy/Connect
 Args: port
 ```
+## Usage
+Please check the `example` folder.
