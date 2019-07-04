@@ -5,6 +5,13 @@ Unofficial ROS package for  WHILL Model CK control
 1. [whillpy](https://github.com/ShibataLab/whillpy)
     * Installation steps are provided [here](https://github.com/ShibataLab/whillpy#installation-steps)
 
+
+## Installation
+1. Follow standard ROS package installation procedure
+1. Make sure to set `your_ip` and `baxter_hostname` inside `whill.sh`
+1. Copy `whill.sh` from `scripts` directory to ROS workspace, i.e., `ros_ws`
+1. Source the file, i.e., `source whill.sh`
+
 whill
 ```
 rosservice list | grep whill
