@@ -32,3 +32,6 @@ Args: port
 ```
 ## Usage
 Please check the `example` folder.
+
+## Issues (or Error Reporting)
+Please check [here](https://github.com/ravijo/ros_whillpy/issues) and create issues accordingly.
